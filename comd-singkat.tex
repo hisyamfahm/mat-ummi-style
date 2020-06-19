@@ -1,0 +1,87 @@
+\usepackage{colortbl}  %--- untuk bikin tabel berwarna
+\usepackage{listings}  %--- untuk menulis listing program
+\usepackage{xcolor}    %--- memanfaatkan warna LaTeX
+\usepackage{arabtex,utf8}
+
+
+\definecolor{abu}{gray}{0.80}  % = hitam 20%
+\newcommand{\cca}{\cellcolor{abu}}
+\newcommand{\ccb}{\bfseries}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+
+%\graphicspath{{DataGambar/}}%----folder tempat gambar-gambar---
+
+\newcommand*{\ovc}{\textit{overcomplete}}
+\newcommand*{\spn}{{\normalfont\textrm{span}}{}}
+\newcommand*{\cspn}{\ol{\spn\rule{0pt}{1.3ex}}{}}
+\newcommand*{\supp}{{\normalfont\textrm{supp}}}
+
+\newcommand*{\norm}[1]{\left\|#1\right\|}          % norm
+\newcommand*{\abs}[1]{\left|#1\right|}             % nilai mutlak
+\newcommand*{\hkd}[1]{\left\langle#1\right\rangle} % hasil-kali-dalam
+\newcommand*{\ol}[1]{\overline{#1}}                % garis atas
+\newcommand*{\wh}[1]{\widehat{#1}}                 
+\newcommand*{\wt}[1]{\widetilde{#1}}
+\newcommand*{\ub}[1]{\underbrace{#1}}              % kurung di bawah
+\newcommand*{\krk}[1]{\left\{#1\right\}}           % kurung kurawal
+\newcommand*{\krb}[1]{\left(#1\right)}             % kurung biasa
+\newcommand*{\krs}[1]{\left[#1\right]}             % kurung siku
+
+\newcommand*{\mtb}[1]{\textit{\textbf{#1}}}        % bikin tulisan miring tebal 
+
+
+\newtheoremstyle{teoremaku}% --- style untuk teorema dkk
+    {4ex}
+    {3ex}
+    {\itshape}
+    {}
+    {\bfseries}
+    {.}
+    {1em}
+    {}
+
+\newtheoremstyle{contohku}% --- style untuk contoh
+    {5ex}
+    {3ex}
+    {}
+    {}
+    {\bfseries}
+    {.}
+    {1em}
+    {}
+
+\theoremstyle{teoremaku}
+\newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{definisi}[teorema]{Definisi}
+\newtheorem{lemma}[teorema]{Lemma}
+\newtheorem{proposisi}[teorema]{Proposisi}
+\newtheorem{akibat}[teorema]{Akibat}
+
+\theoremstyle{contohku}
+\newtheorem{contoh}{Contoh}[chapter]
+
+\newcommand{\refP}[1]{(\ref{#1})}
+\newcommand{\refT}[1]{Teorema~\ref{#1}}
+\newcommand{\refL}[1]{Lemma~\ref{#1}}
+\newcommand{\refD}[1]{Definisi~\ref{#1}}
+\newcommand{\refC}[1]{Contoh~\ref{#1}}
+\newcommand{\refG}[1]{\ref{#1}}
+\newcommand{\refTb}[1]{\ref{#1}}
+\newcommand{\refS}[1]{\S\ref{#1}}
+
+\renewcommand\theteorema{\arabic{chapter}.\arabic{teorema}}
+\renewcommand\thedefinisi{\arabic{chapter}.\arabic{teorema}}
+\renewcommand\thelemma{\arabic{chapter}.\arabic{teorema}}
+\renewcommand\theproposisi{\arabic{chapter}.\arabic{teorema}}
+\renewcommand\theakibat{\arabic{chapter}.\arabic{teorema}}
+\renewcommand\thecontoh{\arabic{chapter}.\arabic{contoh}}
+
+\newcommand{\wis}[1]{\mbox{}\hfill#1\hfill$\square$}
+\newcommand{\wiss}{\mbox{}\hfill$\square$}
+\newcommand{\wish}{\mbox{}\hfill$\square$}
+%\renewcommand{\qedsymbol}{$\blacksquare$}
+\renewcommand{\qedsymbol}{$\square$}
+
+\hyphenation{di-de-fi-ni-si-kan mate-ma-tika multi-resolusi} 
